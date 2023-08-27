@@ -78,7 +78,7 @@ const handleShowDetails = async (id) =>{
         <p class="text-lg font-semibold">Slug :<span class="text-sm"> ${phoneInfo?.slug}</span></p>
         <p class="text-lg font-semibold">Release data :<span class="text-sm"> ${phoneInfo.releaseDate}</span></p>
 
-        <p class="text-lg font-semibold">GPS :<span class="text-sm"> ${phoneInfo?.others?.GPS}</span></p>
+        <p class="text-lg font-semibold">GPS :<span class="text-sm"> ${phoneInfo?.others?.GPS || 'No GPS'}</span></p>
     </div>
     `
         show_details_modal.showModal()
