@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Gadgets</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="mt-12">
+        <nav class="flex flex-1 justify-around">
+            <h2 class="text-2xl font-bold">Hot Gadgets</h2>
+            <button class="bg-[#0D6EFD] py-4 px-8 text-white rounded-lg font-medium">Sign Up</button>
+        </nav>
+        <div class="mt-12 container mx-auto text-center space-y-6">
+            <h1 class="text-5xl font-bold">Apple Iphone 13 Pro Max</h1>
+            <p class="text-base font-normal">There are many variations of passages of Lorem Ipsum available, but the
+                majority have suffered alteration in some form, by injected humou.</p>
+            <button class="bg-[#0D6EFD] py-4 px-8 text-white rounded-lg font-medium">Buy Now</button>
+            <div class="flex flex-grow items-end justify-center gap-3">
+                <img class="w-[210] h-[390]" src="./images/pngwing 3.png" alt="">
+                <img class="w-[310] h-[490]" src="./images/pngwing 1.png" alt="">
+                <img class="w-[210] h-[390]" src="./images/pngwing 2.png" alt="">
+            </div>
+        </div>
+    </header>
+    <main class="container mx-auto mt-12">
+        <!-- search section -->
+        <section class="mb-12 text-center">
+            <h2 class="text-3xl font-bold text-center mb-7">Search your phone</h2>
+            <input id="search-field" type="text" placeholder="Search...."
+                class="input input-bordered w-full max-w-lg" />
+            <button class="bg-[#0D6EFD] py-3 px-8 text-white rounded font-medium"
+                onclick="btnSearchHandler()">Search</button>
+        </section>
+
+        <!-- search result -->
+        <section>
+            <div id="loading-spinner" class="text-center my-40 hidden">
+                <span class="loading loading-ring text-primary loading-lg"></span>
+            </div>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            </div>
+            <div id="show-all-container" class="hidden text-center my-8">
+                <button onclick="handleShowAll()" id="btn-showall" class="btn btn-accent">Show All</button>
+            </div>
+        </section>
+
+        <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box">
+                <div id="show-detail-container">
+                    
+                </div>
+                <div class="modal-action">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="bg-[#DC3545] py-3 px-8 text-white rounded-lg font-medium">Close</button>
+                </div>
+            </form>
+        </dialog>
+    </main>
+    <footer>
+
+    </footer>
+
+
+    <script src="./js/phone.js"></script>
+</body>
+
+</html>
